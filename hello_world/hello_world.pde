@@ -3,6 +3,7 @@ int appWidth, appHeight;
 //
 //declare geometry: square, landscape, portrait
 size(400, 400);
+fullScreen();
 appWidth = width;
 appHeight = height;
 String ls="landscape or square", p="portrait", DO="Display Orientation", intruct="bru turn yhou phun";
