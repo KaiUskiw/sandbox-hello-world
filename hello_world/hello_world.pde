@@ -3,7 +3,7 @@ int appWidth, appHeight;
 //
 void setup() {
 //declare geometry: square, landscape, portrait
-//size(400, 400); //Use size for debugging
+size(400, 700); //Use size for debugging
 //fullScreen(); //Use Fullscreen for easy deployment
 appWidth = width;
 appHeight = height;
@@ -13,7 +13,7 @@ println("\t\t\tWidth ="+width,"\tHeight="+height); //key variables
 println("Display monitor:", "\twidth="+ displayWidth, "&height"+displayHeight);
 //
 //Ternary Operator
-String ls="landscape or square", p="portrait", DO="Display Orientation", instruct="bru turn yhou phun";
+String ls="landscape or square", p="portrait", DO="Display Orientation", instruct="bru turn your phun";
 String orientation = ( width >= height ) ? ls : p;
 println (DO, orientation);
 //
