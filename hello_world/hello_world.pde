@@ -3,7 +3,7 @@ int appWidth, appHeight;
 //
 void setup() {
 //declare geometry: square, landscape, portrait
-size(700, 400); //Use size for debugging
+size(1000, 1000); //Use size for debugging
 //fullScreen(); //Use Fullscreen for easy deployment
 appWidth = width;
 appHeight = height;
@@ -36,7 +36,16 @@ if ( appWidth < appHeight) { //Declare Landscape Mode
 } //End setup
 //
 void draw() {
-    ellipse(180,275,1100,100);
+  rect(700,700,700,9000);
+   ellipse(500,300,200,300);
+    rect(100,100,500,200);
+    rect(400,400,400,400);
+    rect(300,300,300,300);
+    rect(200,200,200,200);
+    rect(250,250,250,250);
+    rect(125,125,125,125);
+    rect(315,315,315,315);
+    rect(500,500,500,500);
 } //End draw
 //
 void keyPressed() {} //end keyPressed
