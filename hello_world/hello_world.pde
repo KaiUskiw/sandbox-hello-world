@@ -36,16 +36,11 @@ if ( appWidth < appHeight) { //Declare Landscape Mode
 } //End setup
 //
 void draw() {
-  rect(700,700,700,9000);
-   ellipse(500,300,200,300);
-    rect(100,100,500,200);
-    rect(400,400,400,400);
-    rect(300,300,300,300);
-    rect(200,200,200,200);
-    rect(250,250,250,250);
-    rect(125,125,125,125);
-    rect(315,315,315,315);
-    rect(500,500,500,500);
+   ellipse(500,300,300,300);
+   rect(350,450,300,380);
+   ellipse(420,300,100,100);
+   ellipse(520,300,100,100);
+   ellispe();
 } //End draw
 //
 void keyPressed() {} //end keyPressed
