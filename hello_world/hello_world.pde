@@ -1,5 +1,7 @@
 //Global Variables
 int appWidth, appHeight;
+float centerWidth, centerHeight, xStart, yStart, widthRect, heightRect;
+color black=#000000, white=#FFFFFF, blue=#0DA6DB;
 //
 void setup() {
 //declare geometry: square, landscape, portrait
@@ -32,15 +34,29 @@ if ( appWidth < appHeight) { //Declare Landscape Mode
 //if ORIENTATION is wrong ... feedback to change it
 //if ( orientation==p ) println(instruct);
 //
-
+//Population
+centerWidth = appWidth * 1/2;
+centerHeight = appHeight * 1/2;
+xStart = centerWidth - ( appWidth * 1/4 ) ;
+yStart = centerHeight - ( appHeight * 1/4 ) ;
+widthRect = appWidth * 1/2;
+heightRect = appHeight * 1/2;
 } //End setup
 //
 void draw() {
+   background(225); //Gray scale 0-255
+   //random(a, b)
+   background(color( random (0, 150), random(0, 150), random(0, 150)  ) ); //color(r,g,b), Night Mode, Casting
+   //Night mode
+   //
+   fill(blue);
+   
    ellipse(500,300,300,300);
-   rect(350,450,300,380);
+   rect(350,450,300,380,60,60,40,40);
    ellipse(420,300,100,100);
    ellipse(520,300,100,100);
-   ellispe();
+   ellipse(480,390,200,50);
+   rect(50,50,300,200,80,80,80,80);
 } //End draw
 //
 void keyPressed() {} //end keyPressed
