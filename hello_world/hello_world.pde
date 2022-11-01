@@ -2,6 +2,9 @@
 int appWidth, appHeight;
 float centerWidth, centerHeight, xStart, yStart, widthRect, heightRect;
 color black=#000000, white=#FFFFFF, blue=#0DA6DB;
+float thick, thin;
+Boolean grayScale=false, randomColour=false, blackBackground=false, nightMode=false;
+//
 //
 void setup() {
 //declare geometry: square, landscape, portrait
@@ -41,15 +44,22 @@ xStart = centerWidth - ( appWidth * 1/4 ) ;
 yStart = centerHeight - ( appHeight * 1/4 ) ;
 widthRect = appWidth * 1/2;
 heightRect = appHeight * 1/2;
+ thick = appWidth * 1/70;
+ thin =  appWidth * 1/140;
 } //End setup
 //
 void draw() {
    background(225); //Gray scale 0-255
    //random(a, b)
-   background(color( random (0, 150), random(0, 150), random(0, 150)  ) ); //color(r,g,b), Night Mode, Casting
+   background(color( random (0, 150), random(0, 120), random(0, 150)  ) ); //color(r,g,b), Night Mode, Casting
    //Night mode
    //
-   fill(blue);
+   fill(white);
+   strokeWeight(thick); //noStroke()
+    //Night Mode Decision
+  if ( nightMode == true )
+  {
+    if ( blackBackground == true ) background(black);
    
    ellipse(500,300,300,300);
    rect(350,450,300,380,60,60,40,40);
@@ -57,9 +67,23 @@ void draw() {
    ellipse(520,300,100,100);
    ellipse(480,390,200,50);
    rect(50,50,300,200,80,80,80,80);
+   rect(545,820,100,100,1,1,50,50);
+   rect(360,820,100,100,1,1,50,50);
+   rect(250,500,100,100,30,30,30,30);
+   rect(650,500,100,100,30,30,30,30);
+   ellipse(400,300,20,20);
+   ellipse(500,300,20,20);
 } //End draw
 //
-void keyPressed() {} //end keyPressed
+void keyPressed() {
+  grayScale = false;
+  randomColour = false;
+  blackBackground = false; 
+  if ( key == 'A' || key == 'a' ) grayScale = true;
+  if ( key == 'S' || key == 's' ) randomColour = true;
+  if ( key == 'W' || key == 'w' ) blackBackground = true;
+  } 
+//end keyPressed
 //
 void mousePressed() {} //end mousePressed
 //
