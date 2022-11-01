@@ -60,7 +60,7 @@ void draw() {
   if ( nightMode == true )
   {
     if ( blackBackground == true ) background(black);
-   
+  }
    ellipse(500,300,300,300);
    rect(350,450,300,380,60,60,40,40);
    ellipse(420,300,100,100);
@@ -73,7 +73,7 @@ void draw() {
    rect(650,500,100,100,30,30,30,30);
    ellipse(400,300,20,20);
    ellipse(500,300,20,20);
-} //End draw
+   } //End draw
 //
 void keyPressed() {
   grayScale = false;
